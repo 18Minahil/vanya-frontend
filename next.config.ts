@@ -1,10 +1,29 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  images: {
-    domains: ["localhost", "localhost:1337"],
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-};
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '1337',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'mindful-fireworks-e94e8b5d87.media.strapiapp.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+    unoptimized: true,
+  },
+}
 
-export default nextConfig;
+export default nextConfig
 

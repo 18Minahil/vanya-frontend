@@ -199,7 +199,7 @@ export default function HomePage() {
               <p className="text-lg text-gray-600 font-light leading-relaxed max-w-md">
                 Discover our latest Eid collection featuring contemporary designs with traditional craftsmanship.
               </p>
-              <Link href="/eid-collection">
+              <Link href="/products">
                 <Button
                   className="bg-black text-white hover:bg-gray-800 px-8 py-3 text-sm tracking-[0.2em] font-light"
                   size="lg"
